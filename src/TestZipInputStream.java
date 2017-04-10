@@ -16,7 +16,7 @@ public class TestZipInputStream {
 
         try (FileInputStream myFile = new FileInputStream("Lesson14.zip");
              BufferedInputStream	buff = new BufferedInputStream(myFile);
-             ZipInputStream zipFile = new ZipInputStream(buff);){
+             ZipInputStream zipFile = new ZipInputStream(buff)){
 
             while ((ze = zipFile.getNextEntry()) != null) {
                 System.out.println(ze.getName());
