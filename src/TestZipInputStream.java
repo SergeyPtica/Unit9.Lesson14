@@ -20,9 +20,9 @@ public class TestZipInputStream {
 
             while ((ze = zipFile.getNextEntry()) != null) {
                 System.out.println(ze.getName());
-                zipFile.closeEntry();
             }
-
+// following is not required due to Java8 close it automatically
+//            zipFile.closeEntry();
         } catch (IOException e) {
             System.out.println("Could not read file: " + e.toString());
         }
